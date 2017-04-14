@@ -1,0 +1,88 @@
+#header {
+  color: #6d6d6d;
+  height: 78px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+#header .logo {
+  height: 38px;
+}
+#header .header-nav li {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin-left: 28px;
+}
+#header .reg-log {
+  margin-right: 8px;
+}
+#header .reg-log li {
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 18px;
+  position: relative;
+}
+#header .reg-log li:first-child:after {
+  border-right: 1px solid #e5e5e5;
+  content: " ";
+  height: 22px;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+#header .toJober {
+  background-color: #27be9f;
+  color: #ffffff;
+  height: 38px;
+}
+.search-box {
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  height: 36px;
+  width: 295px;
+  position: relative;
+}
+.search-box .search-list {
+  background: url('/static/images/arrow-bot.png') no-repeat 65px center;
+  background-size: auto 10px;
+  position: relative;
+  width: 90px;
+  height: 36px;
+  line-height: 36px;
+}
+.search-box .search-list:after {
+  border-right: 1px solid #dcdcdc;
+  content: " ";
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.search-box .curr-chose {
+  padding-right: 20px;
+  text-align: center;
+}
+.search-box .search-str {
+  background: url("/static/images/search-icon.png") no-repeat right center;
+  background-size: 16px auto;
+  border: none;
+  height: 35px;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 28px;
+  right: 16px;
+  top: 0;
+  outline: none;
+  width: 186px;
+}
+.search-box .search-str:focus,
+.search-box .search-str:active {
+  border: none;
+  outline: none;
+}
+#footer {
+  background-color: #303030;
+  height: 100px;
+}

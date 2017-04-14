@@ -1,0 +1,46 @@
+@import "variable";
+
+//赋值背景色跟字体颜色
+.btn-bgc(@bgc, @texc){
+  background-color: @bgc;
+  color: @texc;
+}
+
+//tit-font
+.tit-font{
+  font-size: 24px;
+}
+//btn通用
+.btn {
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-green-big{
+
+}
+.btn-green-small{
+  padding: 8px 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover{
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
+}
+.btn-yellow-big{
+  background: url("/static/images/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 38px)" center;
+  background-size: 15px auto;
+  padding: 13px 62px 13px 56px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Yellowshness, #ffffff);
+  &:hover{
+    .btn-bgc(@Yellow_Bottle, #ffffff);
+  }
+}
+.btn-del{
+
+}

@@ -1,0 +1,2 @@
+const USER_NAME = "abc12345666";
+const PASSWORD = "LINK_C5C0";
