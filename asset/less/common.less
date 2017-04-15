@@ -1,9 +1,24 @@
 @import "variable";
 
+
+//@6217991810006466137
+//@0730
 //赋值背景色跟字体颜色
-.btn-bgc(@bgc, @texc){
+.btn-bgc(@bgc; @texc){
   background-color: @bgc;
   color: @texc;
+}
+//圆形
+.arc(@w;@lineStyle){
+  border-radius: 50%;
+  border: 1px solid @lineStyle;
+  width: @w;
+  height: @w;
+}
+//absolute定位
+.abs_pos(@xpos; @ypos){
+  position: absolute;
+
 }
 
 //tit-font
