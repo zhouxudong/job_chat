@@ -1,5 +1,44 @@
+.tit-font {
+  font-size: 24px;
+}
+.btn {
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-green-small {
+  padding: 8px 16px;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #27be9f;
+  color: #ffffff;
+}
+.btn-green-small:hover {
+  background-color: #18aa8c;
+  color: #ffffff;
+}
+.btn-yellow-big {
+  background: url("/static/images/arrow-btn.png") no-repeat;
+  background-position: calc(100% - 38px) center;
+  background-size: 15px auto;
+  padding: 13px 62px 13px 56px;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #ffC820;
+  color: #ffffff;
+}
+.btn-yellow-big:hover {
+  background-color: #efb608;
+  color: #ffffff;
+}
 #header {
-  color: #6d6d6d;
+  color: #565656;
   height: 78px;
   width: 1200px;
   margin: 0 auto;
@@ -32,11 +71,6 @@
   right: 0;
   top: 8px;
 }
-#header .toJober {
-  background-color: #27be9f;
-  color: #ffffff;
-  height: 38px;
-}
 .search-box {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
@@ -61,8 +95,22 @@
   top: 5px;
 }
 .search-box .curr-chose {
+  cursor: pointer;
   padding-right: 20px;
   text-align: center;
+}
+.search-box .search-sel li {
+  background-color: #ffffff;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  cursor: pointer;
+  padding-right: 16px;
+  text-align: center;
+}
+.search-box .search-sel li:last-child {
+  border-bottom: 1px solid #dcdcdc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .search-box .search-str {
   background: url("/static/images/search-icon.png") no-repeat right center;
