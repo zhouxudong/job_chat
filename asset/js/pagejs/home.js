@@ -34,6 +34,18 @@ $(".carous-next").on("click", function (e) {
     }
 });
 
+$(".curr-chose").on("click", function (e) {
+
+    $(".search-sel").toggleClass("none");
+});
+$(".search-sel").on("click", "li", function (e) {
+    var $ele = $(this),
+        opTxt = $ele.text();
+
+    $(".search-sel").toggleClass("none");
+    $(".curr-chose").text(opTxt);
+});
+
 
 /*将要显示*/
 function carous_transform($ele, carous_w) {
