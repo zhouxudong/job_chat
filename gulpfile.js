@@ -27,9 +27,9 @@ gulp.task("serve", () => {
     browserSync.init({
         proxy: `localhost:${port}/home.html`
     })
-
-    gulp.watch("asset/js/pagejs/*.js", ["lint","js_single"]);
-    gulp.watch("asset/less/*.less", ["commonStyle"]);
+    gulp.watch("asset/js/*.js", ["lint", "js"]);    //检测、合并
+    gulp.watch("asset/js/pagejs/*.js", ["lint", "js_single"]);      //检测单页js
+    gulp.watch("asset/less/*.less", ["commonStyle"]);       //编译、合并less
     gulp.watch("view/**.html").on("change", browserSync.reload);
 })
 
@@ -37,6 +37,7 @@ gulp.task("serve", () => {
 //检测js代码、规范
 gulp.task("lint", () => {
     gulp.src([
+        'asset/js/util.js',
         'asset/js/pagejs/home.js'
     ])
     .pipe(jshint())
@@ -79,7 +80,8 @@ gulp.task("js", () => {
     pump([
         gulp.src([
             'asset/js/es5-sham.min.js',
-            'asset/js/es5-shim.min.js'
+            'asset/js/es5-shim.min.js',
+            'asset/js/util.js'
         ]),
         concat("aio.min.js"),
         uglify(),
@@ -101,11 +103,11 @@ gulp.task('const', () => {
         }),
         gulp.dest("public/js")
     ])
-})
+});
 
 gulp.task("default", ["serve"]);
 
-// gulp.task('default', function() {
-//     // 将你的默认的任务代码放在这
-//     gulp.run("lint", "commonStyle", "js_single");
-// });
+gulp.task('reCompile', function() {
+    // 将你的默认的任务代码放在这
+    gulp.run("lint", "commonStyle", "js_single", "js");
+});
