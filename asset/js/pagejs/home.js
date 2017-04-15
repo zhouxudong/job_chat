@@ -38,13 +38,16 @@ $(".carous-next").on("click", function (e) {
 /*将要显示*/
 function carous_transform($ele, carous_w) {
     //将要显示的carouse的索引
-    var index = $ele.index();
+    var index = $ele.index(),
 
-    //将要显示的carouse移动到中间（ index为1,所以用 (1 - index) ）
-    var translateX = (1 - index) * carous_w;
+        //get vendor + transform
+        vendorTransform = util.prefixStyle("transform"),
+
+        //将要显示的carouse移动到中间（ index为1,所以用 (1 - index) ）
+        translateX = (1 - index) * carous_w;
 
     //carouse实体动作、动画
-    $(".carous-item-wrap").css("transform", "translateX("+ translateX+"px)");
+    $(".carous-item-wrap").css(vendorTransform, "translateX("+ translateX+"px)");
     $(".carous-item.curr").removeClass("curr");
     $ele.addClass("curr");
 
