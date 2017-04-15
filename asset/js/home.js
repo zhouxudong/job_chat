@@ -11,7 +11,7 @@ $(".carous-inex").on("click", "li", function (e) {
         $carouse = $(".carous-item").eq($ele.index());
 
     carous_transform($carouse, Carous_item_w);
-})
+});
 
 $(".carous-pre").on("click", function (e) {
     var curCarous = $(".carous-item.curr").index();
@@ -21,7 +21,7 @@ $(".carous-pre").on("click", function (e) {
 
         carous_transform($carouse, Carous_item_w);
     }
-})
+});
 
 $(".carous-next").on("click", function (e) {
     var curCarous = $(".carous-item.curr").index(),
@@ -32,8 +32,7 @@ $(".carous-next").on("click", function (e) {
 
         carous_transform($carouse, Carous_item_w);
     }
-})
-
+});
 
 
 /*将要显示*/
