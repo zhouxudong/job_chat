@@ -15,19 +15,35 @@ var less = require("gulp-less");
 var LessAutoprefix = require('less-plugin-autoprefix');
 var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
 var concatCss = require('gulp-concat-css');
+var browserSync = require("browser-sync").create();
+var config = require("./config");
 
+var port = process.env.PORT || config.dev.port;
 var $ = loadPlugins();
+
+//热部署监听
+
+gulp.task("serve", () => {
+    browserSync.init({
+        proxy: `localhost:${port}/home.html`
+    })
+
+    gulp.watch("asset/js/pagejs/*.js", ["lint","js_single"]);
+    gulp.watch("asset/less/*.less", ["commonStyle"]);
+    gulp.watch("view/**.html").on("change", browserSync.reload);
+})
 
 
 //检测js代码、规范
 gulp.task("lint", () => {
     gulp.src([
-        'asset/js/home.js'
+        'asset/js/pagejs/home.js'
     ])
     .pipe(jshint())
     .pipe(jshint.reporter("default"))
     .pipe(notify({message: "js lint task is success!"}))
-})
+});
+
 
 
 //合并压缩less文件
@@ -50,7 +66,7 @@ gulp.task("commonStyle", () => {
 gulp.task("js_single", () => {
     pump([
         gulp.src([
-            'asset/js/home.js'
+            'asset/js/pagejs/home.js'
         ]),
         uglify(),
         gulp.dest("public/js")
@@ -87,7 +103,9 @@ gulp.task('const', () => {
     ])
 })
 
-gulp.task('default', function() {
-    // 将你的默认的任务代码放在这
-    gulp.run("lint", "commonStyle", "js_single");
-});
+gulp.task("default", ["serve"]);
+
+// gulp.task('default', function() {
+//     // 将你的默认的任务代码放在这
+//     gulp.run("lint", "commonStyle", "js_single");
+// });
