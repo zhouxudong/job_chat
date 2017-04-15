@@ -18,16 +18,17 @@ var concatCss = require('gulp-concat-css');
 
 var $ = loadPlugins();
 
-/*
+
+//检测js代码、规范
 gulp.task("lint", () => {
     gulp.src([
-        './public/bundle.js'
+        'asset/js/home.js'
     ])
     .pipe(jshint())
     .pipe(jshint.reporter("default"))
     .pipe(notify({message: "js lint task is success!"}))
 })
-*/
+
 
 //合并压缩less文件
 gulp.task("commonStyle", () => {
@@ -88,5 +89,5 @@ gulp.task('const', () => {
 
 gulp.task('default', function() {
     // 将你的默认的任务代码放在这
-    gulp.run("commonStyle", "js_single");
+    gulp.run("lint", "commonStyle", "js_single");
 });
