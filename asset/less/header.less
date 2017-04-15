@@ -1,6 +1,6 @@
-@import "variable.less";
+@import "common";
 #header{
-  color: #6d6d6d;
+  color: @Font-main-color-l;
   height: 78px;
   width: @HOME_MAIN_W;
   margin: 0 auto;
@@ -32,16 +32,11 @@
       }
     }
   }
-  .toJober{
-    background-color: #27be9f;
-    color: #ffffff;
-    height: 38px;
-  }
 }
 
 @search_height: @HEADER_AREA_H;
 .search-box{
-  border: 1px solid #dcdcdc;
+  border: 1px solid @Gray-color;
   border-radius: 3px;
   height: @search_height;
   width: 295px;
@@ -54,7 +49,7 @@
     height: @search_height;
     line-height: @search_height;
     &:after{
-      border-right: 1px solid #dcdcdc;
+      border-right: 1px solid @Gray-color;
       content: " ";
       height: 25px;
       position: absolute;
@@ -63,8 +58,21 @@
     }
   }
   .curr-chose{
+    cursor: pointer;
     padding-right: 20px;
     text-align: center;
+  }
+  .search-sel li {
+    background-color: #ffffff;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    cursor: pointer;
+    padding-right: 16px;
+    text-align: center;
+    &:last-child{
+      border-bottom: 1px solid @Gray-color;
+      .bottom-radius(5px);
+    }
   }
   .search-str{
     background: url("/static/images/search-icon.png") no-repeat right center;
