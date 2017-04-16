@@ -27,5 +27,39 @@ var util = {
 
         style = style.charAt(0).toUpperCase() + style.substr(1);
         return vendor + style;
+    },
+    //transition过度结束触发
+    transitionEnd: function () {
+        var vendor = this.vendor();
+
+        if(vendor === false) return false;
+        var transitionEnd = {
+            ''          : 'transitionend',
+            'webkit'    : 'webkitTransitionEnd',
+            'Moz'       : 'transitionend',
+            'O'         : 'otransitionend',
+            'ms'        : 'MSTransitionEnd'
+        };
+        return transitionEnd[vendor];
+    },
+    //添加帧定时器
+    requestAnimationFrame: function () {
+        return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    setTimeout(callback, 1000/60);
+                };
+    },
+    //清楚帧定时器
+    cancelAnimationFrame: function () {
+        return window.cancelAnimationFrame ||
+                window.webkitCancelAnimationFrame ||
+                window.mozCancelAnimationFrame ||
+                window.oCancelAnimationFrame ||
+                window.msCancelAnimationFrame ||
+                clearTimeout;
     }
 };
