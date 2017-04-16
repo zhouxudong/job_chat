@@ -59,8 +59,8 @@ gulp.task("commonStyle", () => {
         }),
         concatCss("common.min.css"),
         cleancss(),
-        gulp.dest("public/css")
-
+        gulp.dest("public/css"),
+        browserSync.stream()
     ])
 })
 //压缩单页js
@@ -70,7 +70,8 @@ gulp.task("js_single", () => {
             'asset/js/pagejs/home.js'
         ]),
         uglify(),
-        gulp.dest("public/js")
+        gulp.dest("public/js"),
+        browserSync.stream()
     ])
 })
 
@@ -86,6 +87,7 @@ gulp.task("js", () => {
         concat("aio.min.js"),
         uglify(),
         gulp.dest("public/js"),
+        browserSync.stream()
     ],function(){
         console.log("js concat and uglify is success!")
     })
