@@ -7,6 +7,23 @@
   cursor: pointer;
   display: inline-block;
 }
+.btn-green-big {
+  background: url("/static/images/arrow-btn.png") no-repeat;
+  background-position: calc(100% - 38px) center;
+  background-size: 15px auto;
+  padding: 13px 62px 13px 56px;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #27be9f;
+  color: #ffffff;
+}
+.btn-green-big:hover {
+  background-color: #18aa8c;
+  color: #ffffff;
+}
 .btn-green-small {
   padding: 8px 16px;
   border: 1px solid;
