@@ -39,7 +39,16 @@
 }
 
 .btn-green-big{
-
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 38px)" center;
+  background-size: 15px auto;
+  padding: 13px 62px 13px 56px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover{
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
 }
 .btn-green-small{
   padding: 8px 16px;
@@ -50,7 +59,7 @@
   }
 }
 .btn-yellow-big{
-  background: url("/static/images/arrow-btn.png") no-repeat;
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
   background-position: ~"calc(100% - 38px)" center;
   background-size: 15px auto;
   padding: 13px 62px 13px 56px;
