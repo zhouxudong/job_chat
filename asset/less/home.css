@@ -25,7 +25,10 @@
   color: #ffffff;
 }
 .btn-green-small {
-  padding: 8px 16px;
+  height: 38px;
+  width: 110px;
+  text-align: center;
+  line-height: 38px;
   border: 1px solid;
   border-radius: 3px;
   cursor: pointer;
@@ -54,8 +57,64 @@
   background-color: #efb608;
   color: #ffffff;
 }
+.banner {
+  position: relative;
+}
+.banner .banner-txt {
+  position: absolute;
+  top: 214px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.banner .banner-txt .btxt-b {
+  font-size: 34px;
+}
+.banner .banner-txt .btxt-s {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #e6e7e7;
+}
 .banner > img {
   display: block;
+}
+.banner-active {
+  border-top: 1px solid #415455;
+  bottom: 0;
+  color: #ffffff;
+  height: 98px;
+  left: 50%;
+  margin-left: -475px;
+  position: absolute;
+  text-align: right;
+  width: 950px;
+}
+.banner-active .ac_item {
+  float: left;
+  padding: 20px 38px 15px;
+  position: relative;
+}
+.banner-active .ac_item:last-child {
+  padding-right: 0;
+}
+.banner-active .ac_item:last-child:after {
+  border: none;
+}
+.banner-active .ac_item:after {
+  border: 1px solid #34494b;
+  content: " ";
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: 42px;
+}
+.banner-active .ac_num {
+  font-size: 28px;
+}
+.banner-active .ac_str {
+  color: #d0d0ce;
+  font-size: 12px;
+  margin-top: 5px;
 }
 .find-work {
   margin: 0 auto;
@@ -71,20 +130,21 @@
   border: 1px solid #eeeeee;
   float: left;
   height: 228px;
+  margin-right: -1px;
+  margin-bottom: -1px;
   width: 250px;
   padding: 27px 20px 0;
   position: relative;
 }
 .work-item .work-more {
-  background-image: url("/static/images/arrow-btn.png");
+  background-image: url("/static/images/arrow-right-y.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 20px auto;
-  background-color: #ffC820;
+  background-size: 15px auto;
   border-radius: 50%;
   border: 1px solid #ffC820;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   bottom: 20px;
   display: inline-block;
   position: absolute;
@@ -110,15 +170,17 @@
 .work-item:hover {
   cursor: pointer;
   border: 1px solid #42c5aa;
+  z-index: 1;
 }
 .work-item:hover > img {
-  width: 0;
+  display: none;
 }
 .work-item:hover .w-item-name {
   color: #27be9f;
   text-align: left;
 }
 .work-item:hover .item-jobs {
+  line-height: 24px;
   font-size: 14px;
   text-align: left;
 }
@@ -127,10 +189,76 @@
   transform: scale(1);
 }
 .project-flow {
-  background: url("/static/images/work-flow.jpg") no-repeat;
+  background: url("/static/images/work-flow-bg.png") no-repeat;
   background-position: center center;
   height: 332px;
   margin-top: 58px;
+}
+.project-flow .pub-tit {
+  color: #ffffff;
+  font-size: 24px;
+  height: 100px;
+  line-height: 74px;
+  padding-top: 20px;
+  text-align: center;
+}
+.project-flow .bottom-line {
+  display: inline-block;
+  position: absolute;
+  width: 70px;
+  border-bottom: 1px solid #ffC820;
+  margin-left: -35px;
+}
+.project-flow .pub-flow {
+  margin: 55px auto 0;
+  width: 1160px;
+}
+.project-flow .flow-item {
+  color: #ffffff;
+  float: left;
+}
+.project-flow .flow-item .flow-step {
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-size: 32px auto;
+  font-size: 18px;
+  height: 58px;
+  padding: 31px 0 0 50px;
+}
+.project-flow .flow-item .flow-cont {
+  line-height: 24px;
+  margin-top: 16px;
+  padding-left: 8px;
+}
+.project-flow .flow-item.step1 {
+  width: 220px;
+}
+.project-flow .flow-item.step1 .flow-step {
+  background-image: url("/static/images/1.png");
+}
+.project-flow .flow-item.step2 {
+  width: 277px;
+}
+.project-flow .flow-item.step2 .flow-step {
+  background-image: url("/static/images/2.png");
+}
+.project-flow .flow-item.step3 {
+  width: 245px;
+}
+.project-flow .flow-item.step3 .flow-step {
+  background-image: url("/static/images/3.png");
+}
+.project-flow .flow-item.step4 {
+  width: 229px;
+}
+.project-flow .flow-item.step4 .flow-step {
+  background-image: url("/static/images/4.png");
+}
+.project-flow .flow-item.step5 {
+  width: 180px;
+}
+.project-flow .flow-item.step5 .flow-step {
+  background-image: url("/static/images/5.png");
 }
 .work-group-rating {
   margin: 109px auto 0;
