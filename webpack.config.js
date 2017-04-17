@@ -3,15 +3,21 @@ var path = require("path");
 //var autoprefixer = require("autoprefixer")
 
 module.exports = {
-    entry: "./index.js",
+    entry: "./app/main.js",
     output: {
-        path: path.join(__dirname,"public"),
-        filename: "bundle.js"
+        path: path.join(__dirname,"public/js"),
+        filename: "app.chat.js"
+    },
+    resolve: {
+        alias: {
+            'vue': 'vue/dist/vue.js'
+        }
     },
     module: {
         loaders:[
-            { test: /\.css$/,loader:'style-loader!css-loader'},
+            { test: /\.vue$/, loader: 'vue-loader'},
             { test:/\.js$/,loader:'babel-loader',exclude:/node_modules/},
+            { test: /\.css$/,loader:'style-loader!css-loader'},
             { test: /\.less$/, loader: 'style!css!postcss!less?sourceMap'},
             //{ test: /\.(png|jpg|eot|svg|ttf|woff|woff2)$/, loader: 'url-loader?limit=8192'}
         ]
