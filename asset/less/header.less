@@ -1,18 +1,40 @@
-@import "common";
+@import "variable";
+
 #header{
   color: @Font-main-color-l;
-  height: 78px;
+  height: @HEAD_HEIGHT;
   width: @HOME_MAIN_W;
   margin: 0 auto;
   padding-top: 20px;
   .logo{
     height: (@HEADER_AREA_H + 2);
   }
-  .header-nav li{
+  .header-nav{
     float: left;
-    height: @HEADER_AREA_H;
-    line-height: @HEADER_AREA_H;
-    margin-left: 28px;
+    position: relative;
+    width: 250px;
+    li{
+      float: left;
+      height: @HEADER_AREA_H;
+      line-height: @HEADER_AREA_H;
+      margin-left: 28px;
+    }
+    .task-h-us{
+      height: @HEAD_HEIGHT;
+      line-height:@HEAD_HEIGHT;
+      position: absolute;
+      top: -20px;
+      li{
+        height: @HEAD_HEIGHT;
+        line-height: @HEAD_HEIGHT;
+        padding: 0 16px;
+        &.curr{
+          background-color: rgb(252, 252, 252);
+          border-bottom: 2px solid @Greenishness;
+        }
+      }
+    }
+
   }
   .reg-log{
     margin-right: 8px;
@@ -31,64 +53,26 @@
         top: 8px;
       }
     }
-  }
-}
-
-@search_height: @HEADER_AREA_H;
-.search-box{
-  border: 1px solid @Gray-color;
-  border-radius: 3px;
-  height: @search_height;
-  width: 295px;
-  position: relative;
-  .search-list{
-    background: url('@{Base-url}/arrow-bot.png') no-repeat 65px center;
-    background-size: auto 10px;
-    position: relative;
-    width: 90px;
-    height: @search_height;
-    line-height: @search_height;
-    &:after{
-      border-right: 1px solid @Gray-color;
-      content: " ";
-      height: 25px;
-      position: absolute;
-      right: 0;
-      top: 5px;
-    }
-  }
-  .curr-chose{
-    cursor: pointer;
-    padding-right: 20px;
-    text-align: center;
-  }
-  .search-sel li {
-    background-color: #ffffff;
-    border-left: 1px solid #dcdcdc;
-    border-right: 1px solid #dcdcdc;
-    cursor: pointer;
-    padding-right: 16px;
-    text-align: center;
-    &:last-child{
-      border-bottom: 1px solid @Gray-color;
-      .bottom-radius(5px);
-    }
-  }
-  .search-str{
-    background: url("@{Base-url}/search-icon.png") no-repeat right center;
-    background-size: 16px auto;
-    border: none;
-    height: (@search_height - 1);
-    position: absolute;
-    padding-left: 5px;
-    padding-right: 28px;
-    right: 16px;
-    top: 0;
-    outline: none;
-    width: 186px;
-    &:focus, &:active{
-      border: none;
-      outline: none;
+    .task-remin{
+      background: url("/static/images/task-reminder.png")  no-repeat;
+      background-size: 16px auto;
+      position: relative;
+      display: inline-block;
+      width:18px;
+      vertical-align: middle;
+      height: 18px;
+      .rem{
+        background-color: @Greenishness;
+        border-radius: 35%;
+        color: #ffffff;
+        font-size: 10px;
+        line-height: initial;
+        position: absolute;
+        right: -8px;
+        text-align: center;
+        top: -6px;
+        width: 18px;
+      }
     }
   }
 }

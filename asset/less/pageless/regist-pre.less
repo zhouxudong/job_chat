@@ -1,0 +1,35 @@
+@import "../variable";
+
+.test_regist-pre_test{content: ""}
+.regist-tit{
+  color: @Font-main-color-b;
+  font-size: 20px;
+  padding: 48px 0;
+}
+.p-item{
+  float: left;
+  padding-bottom: 100px;
+  padding-top: 68px;
+  position: relative;
+  width: 50%;
+  &.p-boss:after{
+    border-right: 1px solid #ddd;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .p-item-pic{width: 114px;}
+  .p-tit-b{
+    color: @Font-main-color-b;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .p-tit-s{
+    color: rgba(0,0,0,0.4);
+    font-size: 14px;
+    margin-bottom: 50px;
+    margin-top: 14px;
+  }
+}

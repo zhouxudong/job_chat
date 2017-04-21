@@ -1,0 +1,108 @@
+@import "variable";
+//登录注册验证码框
+.vcodeImg{
+  display: inline-block;
+  height: 38px;
+  border: 1px solid #ddd;
+  width: 110px;
+  float: right;
+}
+.form-group{
+  margin-bottom: 14px;
+  text-align: left;
+  position: relative;
+  .label{
+    display: inline-block;
+    color: @Font-main-color-b;
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .label-bl{
+    display: block;
+    margin-bottom: 2px;
+  }
+}
+
+.select-const{
+  appearance: none; //清楚select选择框默认样式
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 0 2px 1px #eeeeee inset;
+  background: url("/static/images/select-arrow.png") no-repeat ~"calc(100% - 12px)" center / 8px auto;
+  background-color: #f4f4f4;
+  color: @Font-main-color-b;
+  height: 38px;
+  padding: 0 15px;
+  width: 100%;
+  &::-ms-expand{display: none;}
+  &.chosed{
+    background-color: #fefefe;
+    box-shadow: 0 0 2px 1px #f1f1f1 inset;
+  }
+  &:focus,&:active{
+    outline: none;
+  }
+}
+
+textarea.input-const{
+  padding-top: 5px;
+}
+.input-const{
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 3px;
+  height: 40px;
+  transition: border-color ease-in-out 150ms, box-shadow ease-in-out 150ms;
+  &::-ms-expand{
+    background-color: transparent;
+    border: 0;
+  }
+  &:focus,&:active{
+    border: 1px solid @Greenishness;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1) inset;
+    color: @Greenishness;
+    outline: none;
+  }
+  .error &{
+    border: 1px solid @Red_Error;
+    color: @Red_Error;
+  }
+}
+.error_log{
+  color: @Red_Error;
+  position: absolute;;
+  right: 16px;
+  top: 10px;
+  display: none;
+  .error &{
+    display: block;
+  }
+}
+//icheck
+.icheck-lable{
+
+}
+.icheck{
+  .arc(16px, #ddd);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+  &.active:after{
+    background-color: @Greenishness;
+    .arc(10px, @Greenishness);
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    content: " ";
+  }
+}

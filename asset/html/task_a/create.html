@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职客 | 创建新任务</title>
+    <link rel="stylesheet" href="/static/css/common.min.css" />
+    <style>
+        .limt-item{
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="shadow5">
+    @@include("../include/header_us.html")
+</div>
+<div class="bcenter w1054">
+    <div class="tit-btm-bar">创建新任务</div>
+    <form id="create-team" class="wp100" onsubmit="return false">
+        <div class="form-center-inline mt38">
+            <div class="form-group">
+                <div class="w456 dib">
+                    <input class="input-const" name="taskname" placeholder="任务名称"/>
+                </div>
+            </div>
+            <div class="form-group pt5">
+                <label class="label w70">选择领域</label>
+                <div class="dib w185 mr6">
+                    <select class="select-const chosed">
+                        <option value="-1">请选择</option>
+                        <option value="1" selected>设计</option>
+                    </select>
+                </div>
+                <div class="dib w185">
+                    <select class="select-const">
+                        <option value="-1">请选择</option>
+                        <option value="1">平面设计</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group pt5">
+                <label class="label w70">选择语种</label>
+                <div class="dib w185 mr6">
+                    <select class="select-const chosed">
+                        <option value="-1">请选择</option>
+                        <option value="1" selected>英语</option>
+                    </select>
+                </div>
+                <div class="dib w185">
+                    <select class="select-const">
+                        <option value="-1">请选择</option>
+                        <option value="1">日语</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label w70">付费方式</label>
+                <div class="task-limt dib">
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"><input type="radio" name="charge" value="1"> </span> 按页收费
+                        </label>
+                        <div class="w110 dib">
+                            <input class="input-const" />
+                        </div>
+                        元/页
+                    </div>
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"><input type="radio" name="charge" value="2"></span> 按字收费
+                        </label>
+                        <div class="w110 dib">
+                            <input class="input-const" />
+                        </div>
+                        元/千字
+                    </div>
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"><input type="radio" name="charge" value="3"></span> 其它
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label label-bl">任务描述</label>
+                <div class="w456">
+                    <textarea class="input-const" style="height:140px;resize: none" placeholder="请输入描述文字"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="dropupload w456">
+                    文件大小不超过5M<br>
+                    您可以<span class="linkstyle">选择拖拽</span> 上传 或 <span id="uploader" class="linkstyle textdec">上传附件</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label label-bl">选择所需要的技能</label>
+                <div>
+                    <span class="skill-item">Photoshop</span>
+                    <span class="skill-item">MAYA</span>
+                    <span class="skill-item active">C4D</span>
+                    <span class="skill-item">InDesign</span>
+                    <span class="skill-item">Sketch up</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cut-line"></div>
+
+        <div class="form-center-inline">
+            <div class="form-group mt20">
+                <label class="label w70">倾向形式</label>
+                <div class="dib lineh40">
+                    <label class="mr10">
+                        <span class="icheck"></span>个人
+                    </label>
+                    <label class="mr10">
+                        <span class="icheck"></span>团队
+                    </label>
+                    <label class="mr10">
+                        <span class="icheck"></span>企业
+                    </label>
+                    <label>
+                        <span class="icheck"></span>都可以
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label w70">选择城市</label>
+                <div class="dib w185">
+                    <select class="select-const chosed">
+                        <option value="-1">全部</option>
+                        <option value="1" selected>北京</option>
+                    </select>
+                </div>
+                <div class="dib w185">
+                    <select class="select-const">
+                        <option value="-1">全部</option>
+                        <option value="1">北京</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="label w70">价格区间</label>
+                <div class="w110 dib">
+                    <input class="input-const" />
+                </div>
+                <span> - </span>
+                <div class="w110 dib">
+                    <input class="input-const" />
+                </div>
+                元
+            </div>
+            <div class="form-group">
+                <label class="label w70">任务期限</label>
+                <div class="task-limt dib">
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"></span> 时间模式
+                        </label>
+                        <div class="w90 dib">
+                            <select class="select-const">
+                                <option>年</option>
+                            </select>
+                        </div>
+                        <div class="w90 dib">
+                            <select class="select-const">
+                                <option>月</option>
+                            </select>
+                        </div>
+                        <div class="w90 dib">
+                            <select class="select-const">
+                                <option>日</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"></span> 时长模式
+                        </label>
+                        <div class="w90 dib">
+                            <input class="input-const" />
+                        </div>
+                        天
+                    </div>
+                    <div class="limt-item">
+                        <label>
+                            <span class="icheck"></span> 不规定
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cut-line"></div>
+
+        <div class="form-group mt20">
+            <button class="btn-saveinfo">创建任务</button>
+        </div>
+    </form>
+</div>
+
+<script src="/static/js/aio.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+<script src="/static/plugins/plupload/plupload.full.min.js"></script>
+<!--<script src="https://cdn.bootcss.com/plupload/3.1.0/plupload.min.js"></script>-->
+<script>
+    var uploader = new plupload.Uploader({
+        browse_button: "uploader",
+        url: "upload.php",
+        drop_element: $(".dropupload")[0]
+    });
+    uploader.init();
+    uploader.bind("FilesAdded", function (file) {
+        console.log(file);
+    })
+</script>
+</body>
+</html>

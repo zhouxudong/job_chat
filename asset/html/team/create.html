@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职客 | 任务列表</title>
+    <link rel="stylesheet" href="/static/css/common.min.css" />
+    <style>
+        .img-upload{
+            background-color: #f7f7f7;
+            border: 1px solid #ededed;
+            height: 163px;
+            width: 163px;
+        }
+    </style>
+</head>
+<body>
+<div class="shadow5">
+    @@include("../include/header_us.html")
+</div>
+<div class="bcenter w1054">
+    <div class="tit-btm-bar">创建团队</div>
+    <form id="create-team" class="form-center" onsubmit="return false">
+        <div class="form-group">
+            <label class="label w70">团队名称</label>
+            <div class="w380 dib">
+                <input class="input-const" name="teamname"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label label-bl">手持身份证照片</label>
+            <div class="clearfix">
+                <div class="img-upload fl"></div>
+                <div class="fl ml36">
+                    <button class="btn-green-small">上传照片</button>
+                    <p class="alph40 mt20">请提供个人真实照片，以便通过审核<br>
+                        图片格式为JPG或PNG，大小不超过5M</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label w70">擅长领域</label>
+            <div class="dib w185">
+                <select class="select-const chosed">
+                    <option value="-1">请选择</option>
+                    <option value="1" selected>设计</option>
+                </select>
+            </div>
+            <div class="dib w185">
+                <select class="select-const">
+                    <option value="-1">请选择</option>
+                    <option value="1">平面设计</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="label label-bl">擅长技能(最多选择5个)</label>
+            <div style="margin-top: 6px;">
+                <span class="skill-item">Photoshop</span>
+                <span class="skill-item">MAYA</span>
+                <span class="skill-item active">C4D</span>
+                <span class="skill-item">InDesign</span>
+                <span class="skill-item">Sketch up</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn-saveinfo">保存信息</button>
+        </div>
+    </form>
+</div>
+
+<script src="/static/js/aio.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+</body>
+</html>

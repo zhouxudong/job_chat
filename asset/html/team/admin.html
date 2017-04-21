@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职客 | 任务列表</title>
+    <link rel="stylesheet" href="/static/css/common.min.css" />
+    <style>
+        @@include("../style/task/list.css")
+        .noteam {
+            float: left;
+            width: 50%;
+            height: 352px;
+            padding-top: 134px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="shadow5">
+    @@include("../include/header_us.html")
+</div>
+<div class="bcenter clearfix" style="width:1175px;margin-top:54px;">
+
+    <div class="noteam border-r">
+        <p class="tit-font mb18">您尚未加入任何团队</p>
+        <button class="btn-green-big">我是找团队</button>
+    </div>
+    <div class="noteam">
+        <p class="tit-font mb18">您还没有创建团队</p>
+        <button class="btn-yellow-big">创建团队</button>
+    </div>
+</div>
+<div class="plat_super clearfix">
+    <div class="maincenter" style="width: 715px;">
+        <div class="plat_s_item">
+            <img src="/static/images/task-emp-right.png" />
+            <p class="plat-tit-b">免费平台</p>
+            <p class="plat-tit-s">无需缴纳任何服务费</p>
+        </div>
+        <div class="plat_s_item">
+            <img src="/static/images/task-emp-left.png" />
+            <p class="plat-tit-b">大牛带队</p>
+            <p class="plat-tit-s">接任务更容易</p>
+        </div>
+        <div class="plat_s_item">
+            <img src="/static/images/task-emp-center.png" />
+            <p class="plat-tit-b">按劳分配</p>
+            <p class="plat-tit-s">公平分配所得报酬</p>
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/aio.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+</body>
+</html>

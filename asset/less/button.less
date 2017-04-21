@@ -1,0 +1,144 @@
+@import "variable";
+//btn通用
+.btn {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-disable{
+  padding: 8px 0;
+  width: 110px;
+  text-align: center;
+  .btn;
+  .btn-bgc(#b6b6b6; #ffffff);
+}
+.btn-del{
+  padding: 8px 0;
+  width: 72px;
+  text-align: center;
+  .btn;
+  .btn-bgc(#ffffff, #6d6d6d)
+}
+//拒绝协议
+.btn-denial{
+  padding:12px 0;
+  width: 180px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(#eeeeee; #565656);
+}
+//拒绝协议页面绿按钮
+.btn-green-middle{
+  padding:12px 0;
+  width: 180px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness; #ffffff);
+  &:hover{
+    .btn-bgc(@Green_Bottle, #ffffff)
+  }
+}
+
+
+.btn-small(){
+  padding: 8px 0;
+  width: 110px;
+  text-align: center;
+  .btn;
+}
+
+.btn-gray-small{
+  .btn-small;
+
+  .btn-bgc(#eeeeee, #565656);
+}
+
+.btn-green-small{
+  .btn-small;
+
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover{
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
+}
+.btn-yellow-small{
+  .btn-small;
+
+  .btn-bgc(@Yellowshness, #ffffff);
+  &:hover{
+    .btn-bgc(@Yellow_Bottle, #ffffff);
+  }
+}
+.btn-green-big{
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 36px)" center;
+  background-size: 15px auto;
+  padding: 13px 20px 13px 0;
+  width: 182px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover{
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
+}
+
+.btn-yellow-big{
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 36px)" center;
+  background-size: 15px auto;
+  padding: 13px 20px 13px 0;
+  width: 182px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Yellowshness, #ffffff);
+  &:hover{
+    .btn-bgc(@Yellow_Bottle, #ffffff);
+  }
+}
+
+//保存信息按钮
+.btn-saveinfo{
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 145px)" center;
+  background-size: 15px auto;
+  padding: 13px 20px 13px 0;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover{
+    .btn-bgc(@Greenishness, #ffffff);
+  }
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+
+//登录按钮
+.btn-login {
+  background: url("@{Base-url}/arrow-btn.png") no-repeat;
+  background-position: ~"calc(100% - 76px)" center;
+  background-size: 15px auto;
+  padding: 10px 0;
+  width: 282px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover {
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
+}
+//注册按钮
+.btn-regist{
+  padding: 10px 0;
+  width: 282px;
+  font-size: 16px;
+  .btn;
+  .btn-bgc(@Greenishness, #ffffff);
+  &:hover {
+    .btn-bgc(@Green_Bottle, #ffffff);
+  }
+}

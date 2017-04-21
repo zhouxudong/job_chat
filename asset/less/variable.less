@@ -13,6 +13,9 @@
 //首页主体宽度
 @HOME_MAIN_W: 1200px;
 
+//头部高度
+@HEAD_HEIGHT: 78px;
+
 //Header searchBox  字体块高
 @HEADER_AREA_H: 36px;
 
@@ -27,3 +30,64 @@
 
 //深黄色, hover
 @Yellow_Bottle: #efb608;
+
+//error
+@Red_Error: #f83954;
+
+//border color
+@Border-color: #dcdcdc;
+
+//@6217991810006466137
+//@0730
+//赋值背景色跟字体颜色
+.btn-bgc(@bgc; @texc){
+  background-color: @bgc;
+  color: @texc;
+}
+//圆形
+.arc(@w;@lineStyle){
+  border-radius: 50%;
+  border: 1px solid @lineStyle;
+  width: @w;
+  height: @w;
+}
+//border-bottom-radius
+.bottom-radius(@deg){
+  border-bottom-left-radius: @deg;
+  border-bottom-right-radius: @deg;
+}
+//border-top-radius
+.top-radius(@deg){
+  border-top-left-radius: @deg;
+  border-top-right-radius: @deg;
+}
+
+//absolute定位
+.abs_pos(@xpos; @ypos){
+  position: absolute;
+}
+//tit-font
+.tit-font(){
+  font-size: 24px;
+}
+//登录注册页北京
+.bgmedia(){
+  @media(min-width: 1400px){
+    min-height: 850px;
+  }
+  @media(min-width: 1200px) and (max-width:1400px){
+    min-height: 750px;
+  }
+  @media(min-width: 1000px) and (max-width:1200px){
+    min-height: 710px;
+  }
+  @media(min-width: 800px) and (max-width:1000px){
+    min-height: 690px;
+  }
+  @media(min-width: 600px) and (max-width: 800px){
+    min-height: 670px;
+  }
+  @media(max-width: 600px){
+    min-height: 650px;
+  }
+}

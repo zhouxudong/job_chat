@@ -1,0 +1,68 @@
+@import "../../variable";
+.task-app-wrap{
+  background-color: #fafafa;
+  overflow: hidden;
+  width: 100%;
+  .admin-nav{
+    background-color: #fff;
+    margin: 20px auto auto;
+    width: 700px;
+    li{
+      float: left;
+      height: 50px;
+      line-height:50px;
+      width: 20%;
+      position: relative;
+      &.curr{
+        background-color: @Greenishness;
+        color: #ffffff;
+      }
+      &:after{
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 14px;
+        height: 26px;
+        border-right: 1px solid #dcdcdc;
+      }
+      &:last-child:after,&.curr:after{
+        content: initial;
+      }
+      &:first-child{border-top-left-radius: 3px;}
+      &:last-child{border-top-right-radius: 3px;}
+    }
+  }
+}
+.task-panel-app{
+  background-color: #ffffff;
+}
+.ad-tender{
+  .nav{display: inline-block;}
+  li{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.task-item{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 0 auto 20px;
+  padding: 30px 90px 25px 50px;
+  position: relative;
+  text-align: left;
+  width: 1130px;
+  ._tit{
+    color: @Font-main-color-l;
+    font-size: 20px;
+  }
+  .buget {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 22px;
+  }
+  .task-operation {
+    bottom: 11px;
+    position: absolute;
+    right: 46px;
+  }
+}

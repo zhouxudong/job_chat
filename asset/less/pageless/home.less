@@ -1,9 +1,15 @@
-@import "common";
+@import "../variable";
+
+.test_home_test{content: ""}
 .banner{
+  background: url("/static/images/banner-bg.png") no-repeat center bottom;
+  background-size: cover;
   position: relative;
+  min-height: 597px;
+
   .banner-txt{
     position: absolute;
-    top: 214px;
+    top: 38%;
     width: 100%;
     text-align: center;
     color: #ffffff;
@@ -13,17 +19,16 @@
     }
     .btxt-s{
       font-size: 16px;
-      margin-top: 10px;
+      margin-top: 18px;
       color: #e6e7e7;
     }
   }
 }
-.banner > img{ display: block;}
 .banner-active{
   border-top: 1px solid #415455;
   bottom: 0;
   color: #ffffff;
-  height: 98px;
+  height: 120px;
   left: 50%;
   margin-left: -475px;
   position: absolute;
@@ -31,7 +36,7 @@
   width: 950px;
   .ac_item{
     float: left;
-    padding: 20px 38px 15px;
+    padding: 22px 38px 15px;
     position: relative;
     &:last-child{
       padding-right: 0;
@@ -42,7 +47,7 @@
     &:after{
       border: 1px solid #34494b;
       content: " ";
-      height: 30px;
+      height: 40px;
       position: absolute;
       right: 0;
       top: 42px;
@@ -54,7 +59,7 @@
   .ac_str{
     color: #d0d0ce;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 16px;
   }
 }
 
@@ -91,7 +96,7 @@
     right: 30px;
     transform: scale(0);
   }
-  & > * { transition: all 500ms; }
+  & > .work-more { transition: all 300ms; }
   & > img {width: 66px;}
   .w-item-name{
     font-size:16px;
@@ -127,7 +132,8 @@
 .project-flow{
   background: url("@{Base-url}/work-flow-bg.png") no-repeat;
   background-position: center center;
-  height: 332px;
+  background-size: cover;
+  min-height: 332px;
   margin-top: 58px;
   .pub-tit{
     color: #ffffff;
@@ -219,7 +225,7 @@
 .wgr-group{
   position: relative;
   &:after{
-    border: 1px solid #f6f6f6;
+    border-right: 1px solid #f6f6f6;
     content: ' ';
     position: absolute;
     right: 0;
@@ -271,6 +277,7 @@
 
   .carous-item{
     background-color: #ffffff;
+    box-shadow: 0px 2px 20px 5px #ddd;
     color: @Font-main-color-l;
     cursor: pointer;
     float: left;

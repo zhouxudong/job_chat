@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职客 | 注册</title>
+    <link rel="stylesheet" href="/static/css/common.min.css" />
+    <style>
+        @@include("style/register.css")
+    </style>
+</head>
+<body>
+@@include("include/header.html")
+<div class="regist-cont">
+    <div class="regist-box">
+        <img class="zk_pic" src="/static/images/zhike_pic.png">
+        <div class="text-line-box mt5">
+            <span class="text-line"></span>
+            <span class="text-txt">选择职客身份</span>
+        </div>
+
+        <div class="chose-stat">
+            <label class="mr80"><span class="icheck active"></span> 个人</label>
+            <label><span class="icheck"></span> 企业</label>
+        </div>
+
+        <div class="text-line-box">
+            <span class="text-line"></span>
+            <span class="text-txt">注册信息</span>
+        </div>
+        <form id="regist-form" class="mt18">
+            <div class="form-group">
+                <input type="text" class="input-const" name="username" placeholder="输入您的手机号" />
+            </div>
+            <div class="form-group">
+                <div class="w214 dib">
+                    <input class="input-const vcode" name="vcode" placeholder="输入图片验证码"/>
+                </div>
+                <span class="vcodeImg"><img src="" title="验证码"></span>
+            </div>
+            <div class="form-group vcode-w">
+                <div class="w214 dib">
+                    <input class="input-const" name="message" placeholder="输入短信验证码"/>
+                </div>
+                <span class="btn-green-small fr">获取验证码</span>
+            </div>
+            <div class="form-group">
+                <input class="input-const" name="password" placeholder="输入6位以上密码"/>
+            </div>
+            <div class="form-group agreeWrap">
+                <span class="icheck active"> </span>我已阅读并同意《用户协议》
+            </div>
+            <div class="form-group pt5" style="text-align: center">
+                <button type="button" class="btn-regist">注册</button>
+            </div>
+        </form>
+        <div class="line mt25"></div>
+        <p class="mt15" style="color: #868686">已有账号？<a href="#" style="color:#27be9f">点此登录</a></p>
+    </div>
+</div>
+
+<script src="/static/js/aio.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+<script src="/static/js/login.js"></script>
+</body>
+</html>
